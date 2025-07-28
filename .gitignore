@@ -1,0 +1,17 @@
+# ---------> VARIABLES DE ENTORNO
+.env
+# ---------> MODULOS DE NODE
+node_modules/
+# LOGS
+.log
+# ---------> ARCHIVOS OCULTOS DE WINDOWS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# ---------> ARCHIVOS DEL SISTEMA
+*.lock
+# ---------> ARCHIVOS DEL VSCODE
+.vscode/
+# ---------> COMPILACIONES
+dist/
+build/
