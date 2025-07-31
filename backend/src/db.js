@@ -1,15 +1,16 @@
 import dotenv from 'dotenv'
-import {pool} from 'pg'
+import pkg from 'pg' //el paquete pg bo es compatible con es modules a si q hay q llevar todas sus propiedades a un objeto pkg y luego desestructurar la clase que queremos usar
+const {Pool} = pkg
 dotenv.config() //carga las variables de entorno
 
 //Declara variables de entorno de la bd 
 
-const pool = new Pool({
-    DB_HOST:process.env.DB_HOST,
-    DB_PORT: process.env.DB_PORT,
-    DB_USER: process.env.DB_USER, 
-    DB_PW: process.env.DB_PASSWORD,  
-    DB_NAME: process.env.DB_NAME
+export const db_pool =  new Pool({
+    host:process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER, 
+    password: process.env.DB_PASSWORD,  
+    database: process.env.DB_NAME
 })
 
-module.exports = pool;
+
