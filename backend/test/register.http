@@ -1,0 +1,10 @@
+###REGISTER
+POST http://localhost:29052/auth/register
+Content-Type: application/json
+
+
+{
+    "username": "jere",
+    "email": "jeretamargo01@gmail.com",
+    "password": 123456
+}
